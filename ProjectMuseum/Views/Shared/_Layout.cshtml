@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProjectMuseum</title>
+  <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="theme-color" content="#feed01"/>
+<title>Wandau | Art & History Museum</title>
+<meta name="author" content="Themezinho">
+<meta name="description" content="For all kind of exhibition museum website">
+<meta name="keywords" content="wandau, exhibition, museum, art, history, entry, ticket, contemporary, modern, booking, visit, culture, life, centuries, roots, fancy, themezinho">
+
+<!-- SOCIAL MEDIA META -->
+<meta property="og:description" content="Wandau | Art & History Museum">
+<meta property="og:image" content="http://www.themezinho.net/wandau/preview.png">
+<meta property="og:site_name" content="wandau">
+<meta property="og:title" content="wandau">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://www.themezinho.net/wandau">
+
+<!-- TWITTER META -->
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:title" content="wandau">
+<meta name="twitter:description" content="Wandau | Art & History Museum">
+<meta name="twitter:image" content="http://www.themezinho.net/wandau/preview.png">
+
+<!-- FAVICON FILES -->
+<link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
+<link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
+<link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
+<link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon">
+<link href="ico/favicon.png" rel="shortcut icon">
+
+<!-- CSS FILES -->
+<link rel="stylesheet" href="~/css/fontawesome.min.css">
+<link rel="stylesheet" href="~/css/odometer.min.css">
+<link rel="stylesheet" href="~/css/fancybox.min.css">
+<link rel="stylesheet" href="~/css/swiper.min.css">
+<link rel="stylesheet" href="~/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/style.css">
+</head>
+
+
+
+</head>
+<body>
+    <header>
+      
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+     
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="~/js/jquery.min.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+<script src="~/js/locomotive-scroll.min.js"></script>
+<script src="~/js/kinetic-slider.js"></script>
+<script src="~/js/fancybox.min.js"></script>
+<script src="~/js/odometer.min.js"></script>
+<script src="~/js/swiper.min.js"></script>
+<script src="~/js/scripts.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
