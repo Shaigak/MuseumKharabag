@@ -2392,7 +2392,7 @@ button[type="submit"] i {
   background: #080808;
 }
 .art-slider-images .swiper-slide img {
-  width: 100%;
+  width:770px;
   float: left;
 }
 
@@ -4207,3 +4207,9 @@ button[type="submit"] i {
 .museyum {
     color: white
 }
+
+.martyimage{
+    width:20px; 
+    height:600px;
+}
+

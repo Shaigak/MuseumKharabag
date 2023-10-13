@@ -26,11 +26,23 @@ namespace ProjectMuseum.Controllers
             List<Slider> sliders = await _sliderService.GetAll();
             List<MiddleAbout> middleAbouts = await _context.MiddleAbouts.ToListAsync();
             List<Event> events = await _context.Events.ToListAsync();
+            List<FirstDeportation> firstDeportations = await _context.FirstDeportations.ToListAsync();
+            List<SecondDeportation> secondDeportations = await _context.SecondDeportations.ToListAsync();
+            List<Blog> blogs =  await _context.Blogs.Where(m => !m.SoftDelete).Include(m => m.Images).ToListAsync();
+
+            List<BigNewsBanner> bigNews = await _context.BigNewsBanners.Where(m => !m.SoftDelete).ToListAsync();
+
+            List<MartyrOfAzerbaijan> martyrOfAzerbaijans = await _context.MartyrOfAzerbaijans.ToListAsync();
 
 
             HomeVM model = new()
 
             {
+                BigNewsBanners = bigNews,
+                Blogs = blogs,
+                MartyrOfAzerbaijans=martyrOfAzerbaijans,
+                SecondDeportations = secondDeportations,
+                FirstDeportations = firstDeportations,
                 Events = events,
                 MiddleAbouts = middleAbouts,
                 Sliders = sliders

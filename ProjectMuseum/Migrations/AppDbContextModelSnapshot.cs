@@ -80,6 +80,34 @@ namespace ProjectMuseum.Migrations
                     b.ToTable("AppUser");
                 });
 
+            modelBuilder.Entity("ProjectMuseum.Models.BeforeDeportation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("İmage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BeforeDeportations");
+                });
+
             modelBuilder.Entity("ProjectMuseum.Models.BigNewsBanner", b =>
                 {
                     b.Property<int>("Id")
@@ -211,6 +239,34 @@ namespace ProjectMuseum.Migrations
                     b.HasIndex("BlogId");
 
                     b.ToTable("BlogImages");
+                });
+
+            modelBuilder.Entity("ProjectMuseum.Models.DeportSlider", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DeportSliders");
                 });
 
             modelBuilder.Entity("ProjectMuseum.Models.Event", b =>

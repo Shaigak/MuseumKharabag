@@ -29,7 +29,9 @@ namespace ProjectMuseum.Data
 
         public DbSet<MiddleAbout> MiddleAbouts { get; set; }
 
+        public DbSet<BeforeDeportation> BeforeDeportations { get; set; }
 
+        public DbSet<DeportSlider> DeportSliders { get; set; }
 
 
 
