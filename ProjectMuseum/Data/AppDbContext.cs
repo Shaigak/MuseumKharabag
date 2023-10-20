@@ -13,6 +13,8 @@ namespace ProjectMuseum.Data
         public DbSet<Slider> Sliders { get; set; }
 
         public DbSet<Blog> Blogs { get; set; }
+
+        public DbSet<DeportationTime> DeportationTimes { get; set; }
         public DbSet<BlogComment> BlogComments { get; set; }
 
         public DbSet<BlogImage> BlogImages { get; set; }
@@ -32,6 +34,10 @@ namespace ProjectMuseum.Data
         public DbSet<BeforeDeportation> BeforeDeportations { get; set; }
 
         public DbSet<DeportSlider> DeportSliders { get; set; }
+
+        public DbSet<Document> Documents { get; set; }
+
+
 
 
 

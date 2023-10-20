@@ -37,6 +37,9 @@
     })
 
 
+     
+
+
     // PAGE TRANSITION
     $('body a').on('click', function (e) {
 
@@ -471,4 +474,13 @@
   });
 
 
+    $('.dropdown-toggle').dropdown()
+
 })(jQuery);
+
+
+
+
+
+
+
