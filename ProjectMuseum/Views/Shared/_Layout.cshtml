@@ -1,4 +1,14 @@
-﻿@*<!doctype html>
+﻿
+
+
+
+
+
+
+           
+                <main role="main" class="pb-3">
+
+                    <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -30,9 +40,11 @@
     <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
     <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon">
     <link href="ico/favicon.png" rel="shortcut icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
+
 
     <!-- CSS FILES -->
     <link rel="stylesheet" href="css/fontawesome.min.css">
@@ -42,7 +54,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/style.css">
 </head>
-<body>
+
     <div class="preloader" id="preloader">
         <svg viewBox="0 0 1920 1080" preserveAspectRatio="none" version="1.1">
             <path d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z"></path>
@@ -135,7 +147,7 @@
                 <!-- end display-mobile -->
             </aside>
             <nav class="navbar">
-                <div class="logo"> <a href="index.html"> <img src="~/assets/images/logo.png" alt="Image"> </a> </div>
+                <div class="logo"> <a asp-controller="Home" asp-action=""> <img src="~/assets/images/logo.png" alt="Image"> </a> </div>
                 <!-- end logo -->
                 <div class="custom-menu">
                     <ul>
@@ -147,26 +159,31 @@
                 <div class="site-menu">
                     <ul>
                         <li><a href="visit.html" data-scroll-to><span class="visit">About</span></a></li>
-                        <li><a href="exhibitions.html" data-scroll-to><span class="visit">Contact</span></a></li>
+                        <li><a asp-controller="Contact" asp-action="Index" data-scroll-to><span class="visit">Contact</span></a></li>
 
 
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-danger ">Fotolar</button>
-                            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="visually-hidden">Toggle Dropdown</span>
-                            </button>
-                            <ul class="dropdown-menu  ">
-                                <li><a class="dropdown-item"  asp-controller="DeportasiyaZamani" asp-action="Index" >Deportasiya Zamani </a></li>
-                                <li><a class="dropdown-item" asp-controller="Deportation" asp-action="Index">Deportasiyadan Evvel</a></li>
-                         
-                            </ul>
 
-                         </div>
                         <li><a href="about.html" data-scroll-to><span class="visit">Videolar</span></a></li>
                         <li><a asp-controller="Document" asp-action="Index" data-scroll-to><span class="visit">Senedler</span></a></li>
 
-                     
+                        <div class="btn-group">
+                            <button class="clickfotos">Fotolar</button>
+
+
+                            <ul style="width:200px;" class="dropdown-menu dropmenufoto d-none   ">
+                                <li class="liwidht"><a class="dropdown-item liwidht" asp-controller="Deportation" asp-action="Index">Deportasiyadan əvvəl</a></li>
+                                <li class="liwidht"><a class="dropdown-item liwidht" asp-controller="DeportasiyaZamani" asp-action="Index">Deportasiya zamanı</a></li>
+
+                            </ul>
+                        </div>
+
+
                     </ul>
+
+
+
+
+
                 </div>
                 <!-- end site-menu -->
                 <div class="search-button"> <i class="far fa-search"></i> </div>
@@ -179,19 +196,14 @@
                     </svg>
                 </div>
                 <!-- end hamburger-menu -->
-                <div class="navbar-button"> <a href="membership.html">Qeydiyyat</a> </div>
+                <div class="navbar-button at"> <a href="membership.html">Qeydiyyat</a> </div>
                 <!-- end navbar-button -->
-            </nav>*@
+              </nav>  
+                       @RenderBody()
 
 
-    <!-- end navbar -->
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-       <footer class="footer">
+                     <footer class="footer">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
@@ -230,17 +242,29 @@
                 </div>
 
             </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+                </main>
+            </div>
 
-    <script src="~/js/jquery.min.js"></script>
-<script src="~/js/bootstrap.min.js"></script>
-<script src="~/js/locomotive-scroll.min.js"></script>
-<script src="~/js/kinetic-slider.js"></script>
-<script src="~/js/fancybox.min.js"></script>
-<script src="~/js/odometer.min.js"></script>
-<script src="~/js/swiper.min.js"></script>
-<script src="~/js/scripts.js"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+
+
+
+
+
+
+          
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+
+            <script src="~/js/jquery.min.js"></script>
+            <script src="~/js/bootstrap.min.js"></script>
+            <script src="~/js/locomotive-scroll.min.js"></script>
+            <script src="~/js/kinetic-slider.js"></script>
+            <script src="~/js/fancybox.min.js"></script>
+            <script src="~/js/odometer.min.js"></script>
+            <script src="~/js/swiper.min.js"></script>
+             <script src="~/js/musey.js"></script>
+            <script src="~/js/scripts.js"></script>
+            @await RenderSectionAsync("Scripts", required: false)
 

@@ -38,7 +38,7 @@ rgbKineticSlider = new rgbKineticSlider({
   navElement: '.main-nav', // set nav class
 
   imagesRgbEffect : false, // enable img rgb effect
-  imagesRgbIntensity : 0.9, // set img rgb intensity
+  imagesRgbIntensity : 1,5, // set img rgb intensity
   navImagesRgbIntensity : 80, // set img rgb intensity for regular nav 
 
   textsDisplay : false, // show title
