@@ -12,6 +12,8 @@ namespace ProjectMuseum.ViewModels
 
         public string Description { get; set; }
 
+        public string About { get; set; }
+
         public List<BlogComment> BlogComments { get; set; }
 
     }

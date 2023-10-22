@@ -12,9 +12,15 @@
                         @foreach (var item in Model.Sliders)
                         {
 
-                            <div class="swiper-slide" data-background="@item.Image">
+                           @* <div class="swiper-slide" data-background="@item.Image">
                                 <div class="mobile-slide" data-background="images/slide-mobile01.jpg"></div>
-                            </div>
+                            </div>*@
+
+
+                             <img class="swiper-slide" src="@item.Image" >
+
+
+                            
 
                         }
                     </div>
